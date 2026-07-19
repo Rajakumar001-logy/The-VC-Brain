@@ -156,7 +156,7 @@ export default function SignupPage() {
                 <Label htmlFor="role" className="text-slate-300">Venture Role</Label>
                 <div className="relative">
                   <UserSquare className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 z-10 text-slate-500" />
-                  <Select value={role} onValueChange={setRole} disabled={isLoading}>
+                  <Select value={role} onValueChange={(v) => v && setRole(v)} disabled={isLoading}>
                     <SelectTrigger className="h-11 border-slate-800 bg-slate-950/50 pl-10 text-white focus:border-primary focus:ring-1 focus:ring-primary">
                       <SelectValue placeholder="Select role" />
                     </SelectTrigger>
