@@ -216,7 +216,7 @@ export default function FounderDetailPage({ params }: PageProps) {
   const triggerScoreEvaluation = async () => {
     setEvaluatingScore(true);
     try {
-      const response = await api.post<ScoreEvaluationResponse>(`/api/v1/founders/${id}/score/evaluate`);
+      const response = await api.post<ScoreEvaluationResponse>(`/api/v1/founders/${id}/score/evaluate`, {});
       setScoreDetails(response);
       toast.success("Founder scorecard successfully recalculated!");
       

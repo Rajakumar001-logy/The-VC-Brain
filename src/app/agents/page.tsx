@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { DashboardShell } from "@/components/layout/dashboard-shell";
 import { api } from "@/lib/api";
+import { cn } from "@/lib/utils";
 import {
   ArrowRight,
   Brain,
@@ -140,7 +141,7 @@ export default function AgentConsolePage() {
         
         setFinalMemoId(response.final_memo_id);
         if (response.output_payload?.memo_markdown) {
-          setMemoText(response.output_payload.memo_markdown);
+          setMemoText(String(response.output_payload.memo_markdown));
         }
         toast.success("Multi-Agent pipeline completed successfully!");
       } else {

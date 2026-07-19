@@ -6,7 +6,7 @@ import { api } from "@/lib/api";
 import {
   Building2,
   CheckCircle2,
-  Github,
+  GitBranch,
   Globe,
   Loader2,
   Play,
@@ -226,7 +226,7 @@ export default function IngestPage() {
                   <div className="grid gap-2">
                     <Label htmlFor="githubUsername">Primary GitHub</Label>
                     <div className="relative">
-                      <Github className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                      <GitBranch className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                       <Input
                         id="githubUsername"
                         value={githubUsername}
