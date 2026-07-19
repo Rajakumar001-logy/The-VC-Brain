@@ -1,4 +1,4 @@
-import type { DealStage, RiskLevel } from "@/types";
+import type { DealStage } from "@/types";
 
 export function formatCurrency(value: number, compact = false): string {
   if (compact) {
@@ -33,7 +33,7 @@ export function stageLabel(stage: DealStage): string {
   return labels[stage];
 }
 
-export function riskLabel(risk: RiskLevel): string {
+export function riskLabel(risk: string): string {
   return risk.charAt(0).toUpperCase() + risk.slice(1);
 }
 
