@@ -163,8 +163,8 @@ export default function MemoDetailPage({ params }: MemoPageProps) {
               {memo.title}
             </CardTitle>
             <CardDescription className="text-slate-350">
-              Authored by {memo.author} · Ask {formatCurrency(memo.ask_amount || memo.askAmount || 500000)} for{" "}
-              {memo.proposed_ownership || memo.proposedOwnership || 8.0}% ownership
+              Authored by {memo.author} · Ask {formatCurrency(memo.askAmount || 500000)} for{" "}
+              {memo.proposedOwnership || 8.0}% ownership
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
