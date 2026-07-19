@@ -238,7 +238,7 @@ export default function FounderDetailPage({ params }: PageProps) {
   const triggerTrustEvaluation = async () => {
     setEvaluatingTrust(true);
     try {
-      const response = await api.post<TrustEvaluationResponse>(`/api/v1/founders/${id}/trust/evaluate`);
+      const response = await api.post<TrustEvaluationResponse>(`/api/v1/founders/${id}/trust/evaluate`, {});
       setTrustDetails(response);
       toast.success("Trust Verification completed successfully!");
       
