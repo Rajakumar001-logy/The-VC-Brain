@@ -148,7 +148,7 @@ export default function MemoDetailPage({ params }: MemoPageProps) {
                 {memo.status}
               </Badge>
               <Badge variant="secondary" className="capitalize">
-                {memo.recommendation || memo.recommendation_status}
+                {memo.recommendation}
               </Badge>
               {memo.riskLevel && (
                 <Badge variant="outline">Risk: {riskLabel(memo.riskLevel)}</Badge>
